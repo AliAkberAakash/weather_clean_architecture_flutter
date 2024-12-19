@@ -3,15 +3,15 @@ import 'package:weather_clean_architecture_flutter/core/data/network/network_req
 import 'package:weather_clean_architecture_flutter/features/current_weather/data/current_weather_network_source.dart';
 import 'package:weather_clean_architecture_flutter/features/current_weather/data/dto/current_weather_response.dart';
 
-class CurrentNetworkDataSourceImpl implements CurrentWeatherNetworkDataSource {
+class CurrentNetworkSourceImpl implements CurrentWeatherNetworkSource {
   final NetworkClient _networkClient;
 
-  CurrentNetworkDataSourceImpl(
+  CurrentNetworkSourceImpl(
       this._networkClient,
       );
 
   @override
-  Future<List<CurrentWeatherResponse>> getWeatherResponse({
+  Future<List<CurrentWeatherResponse>> getCurrentWeather({
     required final double lat,
     required final double lon,
     required final String units,
