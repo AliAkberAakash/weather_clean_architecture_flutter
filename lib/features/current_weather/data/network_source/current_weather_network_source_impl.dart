@@ -1,12 +1,13 @@
 import 'package:weather_clean_architecture_flutter/core/data/network/network_client.dart';
 import 'package:weather_clean_architecture_flutter/core/data/network/network_request.dart';
-import 'package:weather_clean_architecture_flutter/features/current_weather/data/current_weather_network_source.dart';
+import 'package:weather_clean_architecture_flutter/env.dart';
+import 'package:weather_clean_architecture_flutter/features/current_weather/data/network_source/current_weather_network_source.dart';
 import 'package:weather_clean_architecture_flutter/features/current_weather/data/dto/current_weather_response.dart';
 
-class CurrentNetworkSourceImpl implements CurrentWeatherNetworkSource {
+class CurrentWeatherNetworkSourceImpl implements CurrentWeatherNetworkSource {
   final NetworkClient _networkClient;
 
-  CurrentNetworkSourceImpl(
+  CurrentWeatherNetworkSourceImpl(
       this._networkClient,
       );
 
@@ -22,7 +23,7 @@ class CurrentNetworkSourceImpl implements CurrentWeatherNetworkSource {
         queryParams: {
           "lat": lat.toString(),
           "lon": lon.toString(),
-          "appId": "YOUR_API_KEY",
+          "appId": apiKey,
           "units": units,
         },
       );

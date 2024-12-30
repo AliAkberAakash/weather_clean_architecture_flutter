@@ -2,7 +2,7 @@ import 'package:weather_clean_architecture_flutter/features/current_weather/data
 import 'package:weather_clean_architecture_flutter/features/current_weather/data/mapper/current_weather_entity_mapper.dart';
 import 'package:weather_clean_architecture_flutter/features/current_weather/domain/entity/current_weather_entity.dart';
 
-class WeatherDetailsEntityMapperImpl extends CurrentWeatherEntityMapper {
+class CurrentWeatherEntityMapperImpl extends CurrentWeatherEntityMapper {
   @override
   List<CurrentWeatherEntity> map(
     final List<CurrentWeatherResponse> responseList,
