@@ -10,12 +10,12 @@ sealed class CurrentWeatherState extends Equatable {
 final class CurrentWeatherLoadingState extends CurrentWeatherState {}
 
 final class CurrentWeatherLoadedState extends CurrentWeatherState {
-  final List<CurrentWeatherUiModel> weatherDetailsUiModelList;
+  final List<CurrentWeatherUiModel> result;
 
-  CurrentWeatherLoadedState(this.weatherDetailsUiModelList);
+  CurrentWeatherLoadedState(this.result);
 
   @override
-  List<Object?> get props => [weatherDetailsUiModelList];
+  List<Object?> get props => [result];
 }
 
 final class CurrentWeatherErrorState extends CurrentWeatherState {
