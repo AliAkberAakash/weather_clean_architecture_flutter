@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_clean_architecture_flutter/features/current_weather/presentation/screen/current_weather_screen_container.dart';
 
 class WeatherApp extends StatelessWidget {
   const WeatherApp({super.key});
@@ -8,11 +9,7 @@ class WeatherApp extends StatelessWidget {
     return const MaterialApp(
       title: 'Current Weather',
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Center(
-          child: Text("Hello World"),
-        ),
-      ),
+      home: CurrentWeatherScreenContainer(),
     );
   }
 }

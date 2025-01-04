@@ -10,6 +10,8 @@ import 'package:weather_clean_architecture_flutter/features/current_weather/data
 import 'package:weather_clean_architecture_flutter/features/current_weather/data/network_source/current_weather_network_source_impl.dart';
 import 'package:weather_clean_architecture_flutter/features/current_weather/data/repository/current_weather_repository_impl.dart';
 import 'package:weather_clean_architecture_flutter/features/current_weather/domain/repository/current_weather_reository.dart';
+import 'package:weather_clean_architecture_flutter/features/current_weather/presentation/bloc/current_weather_bloc.dart';
+import 'package:weather_clean_architecture_flutter/features/current_weather/presentation/mapper/current_weather_entity_to_ui_model_mapper.dart';
 
 final getIt = GetIt.I;
 
@@ -38,6 +40,15 @@ Future<void> setup() async {
   getIt.registerLazySingleton<CurrentWeatherRepository>(
     () => CurrentWeatherRepositoryImpl(
       getIt.get(),
+      getIt.get(),
+      getIt.get(),
+    ),
+  );
+  getIt.registerLazySingleton<CurrentWeatherEntityToUiModelMapper>(
+    () => CurrentWeatherEntityToUiModelMapperImpl(),
+  );
+  getIt.registerLazySingleton<CurrentWeatherBloc>(
+    () => CurrentWeatherBloc(
       getIt.get(),
       getIt.get(),
     ),
