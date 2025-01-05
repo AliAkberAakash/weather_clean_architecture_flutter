@@ -9,8 +9,8 @@ class CurrentWeatherLoadEvent extends CurrentWeatherEvent {
   final MeasurementUnit units;
 
   CurrentWeatherLoadEvent({
-    this.lat = 23.8041,
-    this.lon = 90.4152,
+    this.lat = 25.2637,
+    this.lon = 57.5759,
     this.units = MeasurementUnit.metric,
   });
 
