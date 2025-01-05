@@ -3,11 +3,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather_clean_architecture_flutter/core/domain/error/error.dart';
 import 'package:weather_clean_architecture_flutter/core/presentation/mapper/error_to_message_mapper.dart';
 import 'package:weather_clean_architecture_flutter/di/di.dart';
-import 'package:weather_clean_architecture_flutter/features/current_weather/presentation/bloc/current_weather_bloc.dart';
-import 'package:weather_clean_architecture_flutter/features/current_weather/presentation/bloc/current_weather_event.dart';
-import 'package:weather_clean_architecture_flutter/features/current_weather/presentation/bloc/current_weather_state.dart';
+import 'package:weather_clean_architecture_flutter/features/current_weather/presentation/bloc/current_weather_bloc/current_weather_bloc.dart';
 import 'package:weather_clean_architecture_flutter/core/screen/error_screen.dart';
 import 'package:weather_clean_architecture_flutter/core/screen/loading_screen.dart';
+import 'package:weather_clean_architecture_flutter/features/current_weather/presentation/bloc/current_weather_bloc/current_weather_event.dart';
+import 'package:weather_clean_architecture_flutter/features/current_weather/presentation/bloc/current_weather_bloc/current_weather_state.dart';
 import 'package:weather_clean_architecture_flutter/features/current_weather/presentation/screen/current_weather_screen.dart';
 
 class CurrentWeatherScreenContainer extends StatefulWidget {
